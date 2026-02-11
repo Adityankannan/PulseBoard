@@ -1,4 +1,4 @@
-import { ActivityItem } from "@/types/activity";
+import { ActivityItem } from "@/components/types/activityItemType";
 import { render } from "@testing-library/react-native";
 import React from "react";
 import { ActivityCard } from "../ActivityCard";

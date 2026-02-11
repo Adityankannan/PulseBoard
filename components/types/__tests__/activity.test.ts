@@ -5,7 +5,7 @@ import {
   ActivityType,
   ITEM_HEIGHT,
   MAX_ITEMS,
-} from "../activity";
+} from "../activityItemType";
 
 describe("activity types", () => {
   describe("ACTIVITY_COLORS", () => {

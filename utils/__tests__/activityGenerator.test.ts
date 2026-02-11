@@ -1,4 +1,7 @@
-import { ACTIVITY_COLORS, ACTIVITY_ICONS } from "@/types/activity";
+import {
+  ACTIVITY_COLORS,
+  ACTIVITY_ICONS,
+} from "@/components/types/activityItemType";
 import {
   generateInitialActivities,
   generateRandomActivity,

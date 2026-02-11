@@ -1,26 +1,17 @@
-import { ActivityCard } from "@/components/ActivityCard";
-import { homeScreenStyles as styles } from "@/constants/styles";
-import { ActivityItem, ITEM_HEIGHT, MAX_ITEMS } from "@/types/activity";
+import {
+  ActivityItem,
+  ITEM_HEIGHT,
+  MAX_ITEMS,
+} from "@/components/types/activityItemType";
 import {
   generateInitialActivities,
   generateRandomActivity,
 } from "@/utils/activityGenerator";
 import * as Haptics from "expo-haptics";
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import {
-  AppState,
-  AppStateStatus,
-  FlatList,
-  Platform,
-  StatusBar,
-  Text,
-  ToastAndroid,
-  View,
-} from "react-native";
-import { GestureHandlerRootView } from "react-native-gesture-handler";
-import Animated, { FadeIn, FadeOut } from "react-native-reanimated";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { AppState, AppStateStatus, Platform, ToastAndroid } from "react-native";
 
-export default function HomeScreen() {
+export function useActivityFeed() {
   const [activities, setActivities] = useState<ActivityItem[]>([]);
   const [currentTime, setCurrentTime] = useState(Date.now());
   const [pendingCount, setPendingCount] = useState(0);
@@ -34,7 +25,6 @@ export default function HomeScreen() {
   }, []);
 
   // Update current time every 10 seconds for relative timestamps
-  // Single timer instead of one per card (better performance)
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTime(Date.now());
@@ -159,15 +149,9 @@ export default function HomeScreen() {
 
   const renderItem = useCallback(
     ({ item }: { item: ActivityItem }) => {
-      return (
-        <ActivityCard
-          item={item}
-          currentTime={currentTime}
-          onDismiss={handleDismiss}
-        />
-      );
+      return { item, currentTime };
     },
-    [currentTime, handleDismiss],
+    [currentTime],
   );
 
   const keyExtractor = useCallback((item: ActivityItem) => item.id, []);
@@ -181,50 +165,13 @@ export default function HomeScreen() {
     [],
   );
 
-  return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <View style={styles.container}>
-        <StatusBar barStyle="light-content" />
-
-        <View style={styles.header}>
-          <View style={styles.headerRow}>
-            <Text style={styles.headerTitle}>PulseBoard</Text>
-            {pendingCount > 0 && (
-              <Animated.View
-                entering={FadeIn.duration(300)}
-                exiting={FadeOut.duration(300)}
-                style={styles.badge}
-              >
-                <Text style={styles.badgeText}>{pendingCount}</Text>
-              </Animated.View>
-            )}
-          </View>
-          <Text style={styles.headerSubtitle}>
-            {`${activities.length}   `}
-            {activities.length === 1 ? "activity" : "activities"}
-            {pendingCount > 0 && (
-              <Text style={styles.pendingText}> • {pendingCount} pending</Text>
-            )}
-            {Platform.OS === "ios" && pendingCount === 0 && (
-              <Text style={styles.hint}> • Swipe left to dismiss</Text>
-            )}
-          </Text>
-        </View>
-
-        <FlatList
-          data={activities}
-          renderItem={renderItem}
-          keyExtractor={keyExtractor}
-          getItemLayout={getItemLayout}
-          maxToRenderPerBatch={10}
-          windowSize={10}
-          removeClippedSubviews={true}
-          initialNumToRender={15}
-          updateCellsBatchingPeriod={50}
-          contentContainerStyle={styles.listContent}
-          showsVerticalScrollIndicator={false}
-        />
-      </View>
-    </GestureHandlerRootView>
-  );
+  return {
+    activities,
+    currentTime,
+    pendingCount,
+    handleDismiss,
+    renderItem,
+    keyExtractor,
+    getItemLayout,
+  };
 }

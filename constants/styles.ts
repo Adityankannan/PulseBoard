@@ -1,4 +1,4 @@
-import { ITEM_HEIGHT } from "@/types/activity";
+import { ITEM_HEIGHT } from "@/components/types/activityItemType";
 import { StyleSheet } from "react-native";
 import { theme } from "./theme";
 

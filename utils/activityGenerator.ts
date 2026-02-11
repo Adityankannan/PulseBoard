@@ -3,7 +3,7 @@ import {
   ACTIVITY_ICONS,
   ActivityItem,
   ActivityType,
-} from "@/types/activity";
+} from "@/components/types/activityItemType";
 
 const ACTIVITY_TEMPLATES = {
   message: [
