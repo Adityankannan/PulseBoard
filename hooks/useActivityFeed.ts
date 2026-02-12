@@ -3,6 +3,7 @@ import {
   ITEM_HEIGHT,
   MAX_ITEMS,
 } from "@/components/types/activityItemType";
+import { APP_CONSTANTS } from "@/constants/appConstants";
 import {
   generateInitialActivities,
   generateRandomActivity,
@@ -21,14 +22,18 @@ export function useActivityFeed() {
 
   // Initialize with some activities
   useEffect(() => {
-    setActivities(generateInitialActivities(15));
+    setActivities(
+      generateInitialActivities(
+        APP_CONSTANTS.ACTIVITY_FEED.INITIAL_ACTIVITIES_COUNT,
+      ),
+    );
   }, []);
 
   // Update current time every 10 seconds for relative timestamps
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTime(Date.now());
-    }, 10000);
+    }, APP_CONSTANTS.ACTIVITY_FEED.TIME_UPDATE_INTERVAL_MS);
 
     return () => clearInterval(timer);
   }, []);
@@ -63,7 +68,7 @@ export function useActivityFeed() {
                     Haptics.NotificationFeedbackType.Success,
                   );
                 }
-              }, index * 100); // Stagger by 100ms
+              }, index * APP_CONSTANTS.ACTIVITY_FEED.ACTIVITY_STAGGER_DELAY_MS);
             });
 
             setCurrentTime(Date.now());
@@ -84,7 +89,9 @@ export function useActivityFeed() {
   useEffect(() => {
     const startInterval = () => {
       // Random interval between 3-5 seconds
-      const randomDelay = Math.random() * 2000 + 3000;
+      const randomDelay =
+        Math.random() * APP_CONSTANTS.EVENT_TIMING.MAX_RANDOM_DELAY_RANGE_MS +
+        APP_CONSTANTS.EVENT_TIMING.MIN_RANDOM_DELAY_MS;
 
       intervalRef.current = setTimeout(() => {
         const newActivity = generateRandomActivity();

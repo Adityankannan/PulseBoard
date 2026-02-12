@@ -1,4 +1,5 @@
 import { ActivityItem } from "@/components/types/activityItemType";
+import { APP_CONSTANTS } from "@/constants/appConstants";
 import { activityCardStyles as styles } from "@/constants/styles";
 import { useActivityCardGesture } from "@/hooks/useActivityCardGesture";
 import React from "react";
@@ -28,9 +29,13 @@ export const ActivityCard: React.FC<ActivityCardProps> = React.memo(
       <Animated.View
         // Entry animations only trigger when items are actually added to the list
         // This ensures animations only occur when app is active (not backgrounded)
-        entering={FadeInDown.duration(400).springify()}
+        entering={FadeInDown.duration(
+          APP_CONSTANTS.ANIMATION.FADE_IN_DURATION_MS,
+        ).springify()}
         // Faster layout transition for smoother gap filling on dismiss
-        layout={LinearTransition.duration(250)}
+        layout={LinearTransition.duration(
+          APP_CONSTANTS.ANIMATION.LAYOUT_TRANSITION_DURATION_MS,
+        )}
         style={styles.container}
       >
         <GestureDetector gesture={panGesture}>

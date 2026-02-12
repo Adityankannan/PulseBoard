@@ -1,4 +1,5 @@
 import { ActivityItem } from "@/components/types/activityItemType";
+import { APP_CONSTANTS } from "@/constants/appConstants";
 import { getRelativeTime } from "@/utils/activityGenerator";
 import * as Haptics from "expo-haptics";
 import { useMemo } from "react";
@@ -27,8 +28,8 @@ export function useActivityCardGesture({
   // No internal timer needed - performance optimization
   const relativeTime = getRelativeTime(item.timestamp, currentTime);
 
-  const translateX = useSharedValue(0);
-  const opacity = useSharedValue(1);
+  const translateX = useSharedValue(APP_CONSTANTS.OPACITY.MIN);
+  const opacity = useSharedValue(APP_CONSTANTS.OPACITY.MAX);
 
   const triggerHaptic = () => {
     if (Platform.OS === "ios") {
@@ -42,34 +43,86 @@ export function useActivityCardGesture({
     }
   };
 
+  // This version recreates the gesture object on every render, causing:
+  // - Memory leaks (gesture objects not properly cleaned up)
+  // - Performance degradation (creating 15-100 gestures per render)
+  // - Potential gesture state loss mid-swipe
+  // const panGesture = Gesture.Pan()
+  //   .activeOffsetX([
+  //     APP_CONSTANTS.GESTURE.ACTIVE_OFFSET_X_MIN,
+  //     APP_CONSTANTS.GESTURE.ACTIVE_OFFSET_X_MAX,
+  //   ])
+  //   .onUpdate((event) => {
+  //     if (Platform.OS === "ios" && event.translationX < 0) {
+  //       translateX.value = event.translationX;
+  //       opacity.value = Math.max(
+  //         APP_CONSTANTS.OPACITY.MIN,
+  //         APP_CONSTANTS.OPACITY.MAX +
+  //           event.translationX /
+  //             APP_CONSTANTS.GESTURE.OPACITY_CALCULATION_DIVISOR,
+  //       );
+  //     }
+  //   })
+  //   .onEnd((event) => {
+  //     if (
+  //       Platform.OS === "ios" &&
+  //       event.translationX < APP_CONSTANTS.GESTURE.SWIPE_THRESHOLD_PX
+  //     ) {
+  //       runOnJS(triggerHaptic)();
+  //       runOnJS(handleDismiss)();
+  //       translateX.value = withTiming(
+  //         APP_CONSTANTS.GESTURE.SWIPE_DISMISS_TRANSLATION_PX,
+  //         { duration: APP_CONSTANTS.ANIMATION.DISMISS_DURATION_MS },
+  //       );
+  //       opacity.value = withTiming(APP_CONSTANTS.OPACITY.MIN, {
+  //         duration: APP_CONSTANTS.ANIMATION.DISMISS_DURATION_MS,
+  //       });
+  //     } else {
+  //       translateX.value = withSpring(APP_CONSTANTS.OPACITY.MIN);
+  //       opacity.value = withSpring(APP_CONSTANTS.OPACITY.MAX);
+  //     }
+  //   });
+
+  // useMemo ensures the gesture is created once and cached for the component's lifetime
+  // This prevents recreation on every render, improving performance and preventing memory leaks
   const panGesture = useMemo(
     () =>
       Gesture.Pan()
-        .activeOffsetX([-10, 10])
+        .activeOffsetX([
+          APP_CONSTANTS.GESTURE.ACTIVE_OFFSET_X_MIN,
+          APP_CONSTANTS.GESTURE.ACTIVE_OFFSET_X_MAX,
+        ])
         .onUpdate((event) => {
-          // Only allow swipe left on iOS
           if (Platform.OS === "ios" && event.translationX < 0) {
             translateX.value = event.translationX;
-            opacity.value = Math.max(0, 1 + event.translationX / 200);
+            opacity.value = Math.max(
+              APP_CONSTANTS.OPACITY.MIN,
+              APP_CONSTANTS.OPACITY.MAX +
+                event.translationX /
+                  APP_CONSTANTS.GESTURE.OPACITY_CALCULATION_DIVISOR,
+            );
           }
         })
         .onEnd((event) => {
-          if (Platform.OS === "ios" && event.translationX < -100) {
-            // Swipe threshold reached - dismiss immediately for faster UX
+          if (
+            Platform.OS === "ios" &&
+            event.translationX < APP_CONSTANTS.GESTURE.SWIPE_THRESHOLD_PX
+          ) {
             runOnJS(triggerHaptic)();
-            // Call dismiss right away so the list removes item and fills gap
             runOnJS(handleDismiss)();
-            // Quick fade out animation
-            translateX.value = withTiming(-400, { duration: 200 });
-            opacity.value = withTiming(0, { duration: 200 });
+            translateX.value = withTiming(
+              APP_CONSTANTS.GESTURE.SWIPE_DISMISS_TRANSLATION_PX,
+              { duration: APP_CONSTANTS.ANIMATION.DISMISS_DURATION_MS },
+            );
+            opacity.value = withTiming(APP_CONSTANTS.OPACITY.MIN, {
+              duration: APP_CONSTANTS.ANIMATION.DISMISS_DURATION_MS,
+            });
           } else {
-            // Snap back
-            translateX.value = withSpring(0);
-            opacity.value = withSpring(1);
+            translateX.value = withSpring(APP_CONSTANTS.OPACITY.MIN);
+            opacity.value = withSpring(APP_CONSTANTS.OPACITY.MAX);
           }
         }),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [], // Empty dependencies - gesture created once and cached
+    [],
   );
 
   const animatedStyle = useAnimatedStyle(() => ({

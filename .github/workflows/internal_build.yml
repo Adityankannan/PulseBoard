@@ -1,4 +1,4 @@
-name: Build Android & iOS
+name: Build Android
 
 on:
   push:
@@ -160,5 +160,3 @@ jobs:
           name: android-release-aab
           path: android/app/build/outputs/bundle/release/*.aab
           retention-days: 30
-
-          

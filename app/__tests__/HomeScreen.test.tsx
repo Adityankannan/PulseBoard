@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react-native";
 import React from "react";
-import HomeScreen from "../index";
+import HomeScreen from "../HomeScreen";
 
 // Mock Date.now() for consistent snapshots
 const MOCK_NOW = 1609459200000; // 2021-01-01 00:00:00

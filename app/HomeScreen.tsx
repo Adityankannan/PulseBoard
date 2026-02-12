@@ -1,5 +1,6 @@
 import { ActivityCard } from "@/components/ActivityCard";
 import { ActivityItem } from "@/components/types/activityItemType";
+import { APP_CONSTANTS } from "@/constants/appConstants";
 import { homeScreenStyles as styles } from "@/constants/styles";
 import { useActivityFeed } from "@/hooks/useActivityFeed";
 import React from "react";
@@ -37,8 +38,12 @@ export default function HomeScreen() {
             <Text style={styles.headerTitle}>PulseBoard</Text>
             {pendingCount > 0 && (
               <Animated.View
-                entering={FadeIn.duration(300)}
-                exiting={FadeOut.duration(300)}
+                entering={FadeIn.duration(
+                  APP_CONSTANTS.ANIMATION.BADGE_FADE_DURATION_MS,
+                )}
+                exiting={FadeOut.duration(
+                  APP_CONSTANTS.ANIMATION.BADGE_FADE_DURATION_MS,
+                )}
                 style={styles.badge}
               >
                 <Text style={styles.badgeText}>{pendingCount}</Text>
@@ -62,11 +67,13 @@ export default function HomeScreen() {
           renderItem={renderItem}
           keyExtractor={keyExtractor}
           getItemLayout={getItemLayout}
-          maxToRenderPerBatch={10}
-          windowSize={10}
+          maxToRenderPerBatch={APP_CONSTANTS.FLATLIST.MAX_TO_RENDER_PER_BATCH}
+          windowSize={APP_CONSTANTS.FLATLIST.WINDOW_SIZE}
           removeClippedSubviews={true}
-          initialNumToRender={15}
-          updateCellsBatchingPeriod={50}
+          initialNumToRender={APP_CONSTANTS.FLATLIST.INITIAL_NUM_TO_RENDER}
+          updateCellsBatchingPeriod={
+            APP_CONSTANTS.FLATLIST.UPDATE_CELLS_BATCHING_PERIOD_MS
+          }
           contentContainerStyle={styles.listContent}
           showsVerticalScrollIndicator={false}
         />

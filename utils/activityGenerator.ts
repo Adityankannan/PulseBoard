@@ -78,14 +78,14 @@ export function generateRandomActivity(): ActivityItem {
   };
 }
 
+// Generates a list of initial activities
 export function generateInitialActivities(count: number = 10): ActivityItem[] {
   const activities: ActivityItem[] = [];
   const now = Date.now();
 
   for (let i = 0; i < count; i++) {
     const activity = generateRandomActivity();
-    // Simulate older timestamps
-    activity.timestamp = new Date(now - (count - i) * 60000); // 1 minute apart
+    activity.timestamp = new Date(now - (count - i) * 60000);
     activities.push(activity);
   }
 

@@ -2,7 +2,6 @@ import { ITEM_HEIGHT } from "@/components/types/activityItemType";
 import { StyleSheet } from "react-native";
 import { theme } from "./theme";
 
-// ActivityIcon styles
 export const activityIconStyles = StyleSheet.create({
   iconContainer: {
     width: theme.layout.iconSize.md,
@@ -13,7 +12,6 @@ export const activityIconStyles = StyleSheet.create({
   },
 });
 
-// ActivityCard styles
 export const activityCardStyles = StyleSheet.create({
   container: {
     height: ITEM_HEIGHT,
@@ -57,7 +55,6 @@ export const activityCardStyles = StyleSheet.create({
   },
 });
 
-// HomeScreen styles
 export const homeScreenStyles = StyleSheet.create({
   container: {
     flex: 1,
