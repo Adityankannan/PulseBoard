@@ -1,53 +1,105 @@
-/**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
- */
+// Theme configuration for PulseBoard
+export const theme = {
+  // Color palette
+  colors: {
+    // Activity type colors
+    activity: {
+      message: "#4A90E2",
+      call: "#50C878",
+      status: "#F5A623",
+      notification: "#9B59B6",
+    },
 
-import { Platform } from 'react-native';
+    // Background colors
+    background: {
+      primary: "#F5F7FA",
+      secondary: "#FFFFFF",
+    },
 
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
+    // Text colors
+    text: {
+      primary: "#1A1A1A",
+      secondary: "#666",
+      tertiary: "#999",
+      white: "#FFFFFF",
+    },
 
-export const Colors = {
-  light: {
-    text: '#11181C',
-    background: '#fff',
-    tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
-    tabIconSelected: tintColorLight,
+    // UI element colors
+    border: "#E0E0E0",
+    shadow: "#000",
+    badge: "#FF3B30",
   },
-  dark: {
-    text: '#ECEDEE',
-    background: '#151718',
-    tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
-    tabIconSelected: tintColorDark,
-  },
-};
 
-export const Fonts = Platform.select({
-  ios: {
-    /** iOS `UIFontDescriptorSystemDesignDefault` */
-    sans: 'system-ui',
-    /** iOS `UIFontDescriptorSystemDesignSerif` */
-    serif: 'ui-serif',
-    /** iOS `UIFontDescriptorSystemDesignRounded` */
-    rounded: 'ui-rounded',
-    /** iOS `UIFontDescriptorSystemDesignMonospaced` */
-    mono: 'ui-monospace',
+  // Spacing scale
+  spacing: {
+    xs: 4,
+    sm: 8,
+    md: 12,
+    lg: 16,
+    xl: 24,
+    xxl: 60,
   },
-  default: {
-    sans: 'normal',
-    serif: 'serif',
-    rounded: 'normal',
-    mono: 'monospace',
+
+  // Border radius scale
+  borderRadius: {
+    sm: 12,
+    md: 24,
   },
-  web: {
-    sans: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
-    serif: "Georgia, 'Times New Roman', serif",
-    rounded: "'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif",
-    mono: "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
+
+  // Typography
+  typography: {
+    fontSize: {
+      xs: 12,
+      sm: 14,
+      md: 16,
+      lg: 28,
+    },
+    fontWeight: {
+      normal: "400" as const,
+      semibold: "600" as const,
+      bold: "bold" as const,
+    },
+    lineHeight: {
+      sm: 18,
+    },
   },
-});
+
+  // Shadows
+  shadows: {
+    card: {
+      shadowColor: "#000",
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.1,
+      shadowRadius: 4,
+      elevation: 3,
+    },
+  },
+
+  // Layout constants
+  layout: {
+    itemHeight: 88,
+    iconSize: {
+      sm: 24,
+      md: 48,
+    },
+    badge: {
+      minWidth: 24,
+      height: 24,
+    },
+  },
+
+  // Activity icons mapping
+  activityIcons: {
+    message: "chatbubble",
+    call: "call",
+    status: "information-circle",
+    notification: "notifications",
+  } as const,
+
+  // App constants
+  constants: {
+    maxItems: 100,
+  },
+} as const;
+
+export type Theme = typeof theme;

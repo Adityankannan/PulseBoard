@@ -1,0 +1,1360 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`ActivityCard Rendering should match snapshot 1`] = `
+<View
+  entering={BaseAnimationMock {}}
+  layout={BaseAnimationMock {}}
+  style={
+    {
+      "height": 88,
+      "paddingHorizontal": 16,
+      "paddingVertical": 8,
+    }
+  }
+>
+  <View
+    gesture={
+      {
+        "activeOffsetX": [MockFunction] {
+          "calls": [
+            [
+              [
+                -10,
+                10,
+              ],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+        "onEnd": [MockFunction] {
+          "calls": [
+            [
+              [Function],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+        "onUpdate": [MockFunction] {
+          "calls": [
+            [
+              [Function],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+      }
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 12,
+            "elevation": 3,
+            "flex": 1,
+            "flexDirection": "row",
+            "padding": 12,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          },
+          {
+            "opacity": 1,
+            "transform": [
+              {
+                "translateX": 0,
+              },
+            ],
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          {
+            "flex": 1,
+            "justifyContent": "center",
+            "marginLeft": 12,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginBottom": 4,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              {
+                "color": "#1A1A1A",
+                "flex": 1,
+                "fontSize": 16,
+                "fontWeight": "600",
+              }
+            }
+          >
+            New Message
+          </Text>
+          <Text
+            style={
+              {
+                "color": "#999",
+                "fontSize": 12,
+                "marginLeft": 8,
+              }
+            }
+          >
+            5m ago
+          </Text>
+        </View>
+        <Text
+          numberOfLines={2}
+          style={
+            {
+              "color": "#666",
+              "fontSize": 14,
+              "lineHeight": 18,
+            }
+          }
+        >
+          John sent you a message
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ActivityCard Snapshots should match snapshot for call type 1`] = `
+<View
+  entering={BaseAnimationMock {}}
+  layout={BaseAnimationMock {}}
+  style={
+    {
+      "height": 88,
+      "paddingHorizontal": 16,
+      "paddingVertical": 8,
+    }
+  }
+>
+  <View
+    gesture={
+      {
+        "activeOffsetX": [MockFunction] {
+          "calls": [
+            [
+              [
+                -10,
+                10,
+              ],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+        "onEnd": [MockFunction] {
+          "calls": [
+            [
+              [Function],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+        "onUpdate": [MockFunction] {
+          "calls": [
+            [
+              [Function],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+      }
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 12,
+            "elevation": 3,
+            "flex": 1,
+            "flexDirection": "row",
+            "padding": 12,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          },
+          {
+            "opacity": 1,
+            "transform": [
+              {
+                "translateX": 0,
+              },
+            ],
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          {
+            "flex": 1,
+            "justifyContent": "center",
+            "marginLeft": 12,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginBottom": 4,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              {
+                "color": "#1A1A1A",
+                "flex": 1,
+                "fontSize": 16,
+                "fontWeight": "600",
+              }
+            }
+          >
+            Incoming Call
+          </Text>
+          <Text
+            style={
+              {
+                "color": "#999",
+                "fontSize": 12,
+                "marginLeft": 8,
+              }
+            }
+          >
+            5m ago
+          </Text>
+        </View>
+        <Text
+          numberOfLines={2}
+          style={
+            {
+              "color": "#666",
+              "fontSize": 14,
+              "lineHeight": 18,
+            }
+          }
+        >
+          Video call from Team Lead
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ActivityCard Snapshots should match snapshot for message type 1`] = `
+<View
+  entering={BaseAnimationMock {}}
+  layout={BaseAnimationMock {}}
+  style={
+    {
+      "height": 88,
+      "paddingHorizontal": 16,
+      "paddingVertical": 8,
+    }
+  }
+>
+  <View
+    gesture={
+      {
+        "activeOffsetX": [MockFunction] {
+          "calls": [
+            [
+              [
+                -10,
+                10,
+              ],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+        "onEnd": [MockFunction] {
+          "calls": [
+            [
+              [Function],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+        "onUpdate": [MockFunction] {
+          "calls": [
+            [
+              [Function],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+      }
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 12,
+            "elevation": 3,
+            "flex": 1,
+            "flexDirection": "row",
+            "padding": 12,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          },
+          {
+            "opacity": 1,
+            "transform": [
+              {
+                "translateX": 0,
+              },
+            ],
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          {
+            "flex": 1,
+            "justifyContent": "center",
+            "marginLeft": 12,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginBottom": 4,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              {
+                "color": "#1A1A1A",
+                "flex": 1,
+                "fontSize": 16,
+                "fontWeight": "600",
+              }
+            }
+          >
+            New Message
+          </Text>
+          <Text
+            style={
+              {
+                "color": "#999",
+                "fontSize": 12,
+                "marginLeft": 8,
+              }
+            }
+          >
+            5m ago
+          </Text>
+        </View>
+        <Text
+          numberOfLines={2}
+          style={
+            {
+              "color": "#666",
+              "fontSize": 14,
+              "lineHeight": 18,
+            }
+          }
+        >
+          John sent you a message
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ActivityCard Snapshots should match snapshot for notification type 1`] = `
+<View
+  entering={BaseAnimationMock {}}
+  layout={BaseAnimationMock {}}
+  style={
+    {
+      "height": 88,
+      "paddingHorizontal": 16,
+      "paddingVertical": 8,
+    }
+  }
+>
+  <View
+    gesture={
+      {
+        "activeOffsetX": [MockFunction] {
+          "calls": [
+            [
+              [
+                -10,
+                10,
+              ],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+        "onEnd": [MockFunction] {
+          "calls": [
+            [
+              [Function],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+        "onUpdate": [MockFunction] {
+          "calls": [
+            [
+              [Function],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+      }
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 12,
+            "elevation": 3,
+            "flex": 1,
+            "flexDirection": "row",
+            "padding": 12,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          },
+          {
+            "opacity": 1,
+            "transform": [
+              {
+                "translateX": 0,
+              },
+            ],
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          {
+            "flex": 1,
+            "justifyContent": "center",
+            "marginLeft": 12,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginBottom": 4,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              {
+                "color": "#1A1A1A",
+                "flex": 1,
+                "fontSize": 16,
+                "fontWeight": "600",
+              }
+            }
+          >
+            Notification
+          </Text>
+          <Text
+            style={
+              {
+                "color": "#999",
+                "fontSize": 12,
+                "marginLeft": 8,
+              }
+            }
+          >
+            5m ago
+          </Text>
+        </View>
+        <Text
+          numberOfLines={2}
+          style={
+            {
+              "color": "#666",
+              "fontSize": 14,
+              "lineHeight": 18,
+            }
+          }
+        >
+          New follower on your post
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ActivityCard Snapshots should match snapshot for status type 1`] = `
+<View
+  entering={BaseAnimationMock {}}
+  layout={BaseAnimationMock {}}
+  style={
+    {
+      "height": 88,
+      "paddingHorizontal": 16,
+      "paddingVertical": 8,
+    }
+  }
+>
+  <View
+    gesture={
+      {
+        "activeOffsetX": [MockFunction] {
+          "calls": [
+            [
+              [
+                -10,
+                10,
+              ],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+        "onEnd": [MockFunction] {
+          "calls": [
+            [
+              [Function],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+        "onUpdate": [MockFunction] {
+          "calls": [
+            [
+              [Function],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+      }
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 12,
+            "elevation": 3,
+            "flex": 1,
+            "flexDirection": "row",
+            "padding": 12,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          },
+          {
+            "opacity": 1,
+            "transform": [
+              {
+                "translateX": 0,
+              },
+            ],
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          {
+            "flex": 1,
+            "justifyContent": "center",
+            "marginLeft": 12,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginBottom": 4,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              {
+                "color": "#1A1A1A",
+                "flex": 1,
+                "fontSize": 16,
+                "fontWeight": "600",
+              }
+            }
+          >
+            Status Update
+          </Text>
+          <Text
+            style={
+              {
+                "color": "#999",
+                "fontSize": 12,
+                "marginLeft": 8,
+              }
+            }
+          >
+            5m ago
+          </Text>
+        </View>
+        <Text
+          numberOfLines={2}
+          style={
+            {
+              "color": "#666",
+              "fontSize": 14,
+              "lineHeight": 18,
+            }
+          }
+        >
+          Project milestone completed
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ActivityCard Snapshots should match snapshot with old timestamp 1`] = `
+<View
+  entering={BaseAnimationMock {}}
+  layout={BaseAnimationMock {}}
+  style={
+    {
+      "height": 88,
+      "paddingHorizontal": 16,
+      "paddingVertical": 8,
+    }
+  }
+>
+  <View
+    gesture={
+      {
+        "activeOffsetX": [MockFunction] {
+          "calls": [
+            [
+              [
+                -10,
+                10,
+              ],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+        "onEnd": [MockFunction] {
+          "calls": [
+            [
+              [Function],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+        "onUpdate": [MockFunction] {
+          "calls": [
+            [
+              [Function],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+      }
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 12,
+            "elevation": 3,
+            "flex": 1,
+            "flexDirection": "row",
+            "padding": 12,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          },
+          {
+            "opacity": 1,
+            "transform": [
+              {
+                "translateX": 0,
+              },
+            ],
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          {
+            "flex": 1,
+            "justifyContent": "center",
+            "marginLeft": 12,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginBottom": 4,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              {
+                "color": "#1A1A1A",
+                "flex": 1,
+                "fontSize": 16,
+                "fontWeight": "600",
+              }
+            }
+          >
+            New Message
+          </Text>
+          <Text
+            style={
+              {
+                "color": "#999",
+                "fontSize": 12,
+                "marginLeft": 8,
+              }
+            }
+          >
+            2d ago
+          </Text>
+        </View>
+        <Text
+          numberOfLines={2}
+          style={
+            {
+              "color": "#666",
+              "fontSize": 14,
+              "lineHeight": 18,
+            }
+          }
+        >
+          John sent you a message
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ActivityCard Snapshots should match snapshot with recent timestamp 1`] = `
+<View
+  entering={BaseAnimationMock {}}
+  layout={BaseAnimationMock {}}
+  style={
+    {
+      "height": 88,
+      "paddingHorizontal": 16,
+      "paddingVertical": 8,
+    }
+  }
+>
+  <View
+    gesture={
+      {
+        "activeOffsetX": [MockFunction] {
+          "calls": [
+            [
+              [
+                -10,
+                10,
+              ],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+        "onEnd": [MockFunction] {
+          "calls": [
+            [
+              [Function],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+        "onUpdate": [MockFunction] {
+          "calls": [
+            [
+              [Function],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+      }
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 12,
+            "elevation": 3,
+            "flex": 1,
+            "flexDirection": "row",
+            "padding": 12,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          },
+          {
+            "opacity": 1,
+            "transform": [
+              {
+                "translateX": 0,
+              },
+            ],
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          {
+            "flex": 1,
+            "justifyContent": "center",
+            "marginLeft": 12,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginBottom": 4,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              {
+                "color": "#1A1A1A",
+                "flex": 1,
+                "fontSize": 16,
+                "fontWeight": "600",
+              }
+            }
+          >
+            New Message
+          </Text>
+          <Text
+            style={
+              {
+                "color": "#999",
+                "fontSize": 12,
+                "marginLeft": 8,
+              }
+            }
+          >
+            30s ago
+          </Text>
+        </View>
+        <Text
+          numberOfLines={2}
+          style={
+            {
+              "color": "#666",
+              "fontSize": 14,
+              "lineHeight": 18,
+            }
+          }
+        >
+          John sent you a message
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ActivityCard Text Truncation should limit description to 2 lines 1`] = `
+<View
+  entering={BaseAnimationMock {}}
+  layout={BaseAnimationMock {}}
+  style={
+    {
+      "height": 88,
+      "paddingHorizontal": 16,
+      "paddingVertical": 8,
+    }
+  }
+>
+  <View
+    gesture={
+      {
+        "activeOffsetX": [MockFunction] {
+          "calls": [
+            [
+              [
+                -10,
+                10,
+              ],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+        "onEnd": [MockFunction] {
+          "calls": [
+            [
+              [Function],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+        "onUpdate": [MockFunction] {
+          "calls": [
+            [
+              [Function],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+      }
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 12,
+            "elevation": 3,
+            "flex": 1,
+            "flexDirection": "row",
+            "padding": 12,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          },
+          {
+            "opacity": 1,
+            "transform": [
+              {
+                "translateX": 0,
+              },
+            ],
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          {
+            "flex": 1,
+            "justifyContent": "center",
+            "marginLeft": 12,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginBottom": 4,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              {
+                "color": "#1A1A1A",
+                "flex": 1,
+                "fontSize": 16,
+                "fontWeight": "600",
+              }
+            }
+          >
+            New Message
+          </Text>
+          <Text
+            style={
+              {
+                "color": "#999",
+                "fontSize": 12,
+                "marginLeft": 8,
+              }
+            }
+          >
+            5m ago
+          </Text>
+        </View>
+        <Text
+          numberOfLines={2}
+          style={
+            {
+              "color": "#666",
+              "fontSize": 14,
+              "lineHeight": 18,
+            }
+          }
+        >
+          This is a very long description that should be truncated to fit in exactly two lines and no more than that in the activity card component
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ActivityCard Text Truncation should limit title to 1 line 1`] = `
+<View
+  entering={BaseAnimationMock {}}
+  layout={BaseAnimationMock {}}
+  style={
+    {
+      "height": 88,
+      "paddingHorizontal": 16,
+      "paddingVertical": 8,
+    }
+  }
+>
+  <View
+    gesture={
+      {
+        "activeOffsetX": [MockFunction] {
+          "calls": [
+            [
+              [
+                -10,
+                10,
+              ],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+        "onEnd": [MockFunction] {
+          "calls": [
+            [
+              [Function],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+        "onUpdate": [MockFunction] {
+          "calls": [
+            [
+              [Function],
+            ],
+          ],
+          "results": [
+            {
+              "type": "return",
+              "value": [Circular],
+            },
+          ],
+        },
+      }
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 12,
+            "elevation": 3,
+            "flex": 1,
+            "flexDirection": "row",
+            "padding": 12,
+            "shadowColor": "#000",
+            "shadowOffset": {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.1,
+            "shadowRadius": 4,
+          },
+          {
+            "opacity": 1,
+            "transform": [
+              {
+                "translateX": 0,
+              },
+            ],
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          {
+            "flex": 1,
+            "justifyContent": "center",
+            "marginLeft": 12,
+          }
+        }
+      >
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "marginBottom": 4,
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              {
+                "color": "#1A1A1A",
+                "flex": 1,
+                "fontSize": 16,
+                "fontWeight": "600",
+              }
+            }
+          >
+            This is a very long title that should be truncated to fit in one line only
+          </Text>
+          <Text
+            style={
+              {
+                "color": "#999",
+                "fontSize": 12,
+                "marginLeft": 8,
+              }
+            }
+          >
+            5m ago
+          </Text>
+        </View>
+        <Text
+          numberOfLines={2}
+          style={
+            {
+              "color": "#666",
+              "fontSize": 14,
+              "lineHeight": 18,
+            }
+          }
+        >
+          John sent you a message
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

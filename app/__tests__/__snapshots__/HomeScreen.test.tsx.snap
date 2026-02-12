@@ -1,0 +1,301 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`HomeScreen Snapshots should match snapshot 1`] = `
+<View>
+  <View
+    style={
+      {
+        "backgroundColor": "#F5F7FA",
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "backgroundColor": "#FFFFFF",
+          "borderBottomColor": "#E0E0E0",
+          "borderBottomWidth": 1,
+          "paddingBottom": 16,
+          "paddingHorizontal": 16,
+          "paddingTop": 60,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginBottom": 4,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#1A1A1A",
+              "fontSize": 28,
+              "fontWeight": "bold",
+            }
+          }
+        >
+          PulseBoard
+        </Text>
+      </View>
+      <Text
+        style={
+          {
+            "color": "#666",
+            "fontSize": 14,
+          }
+        }
+      >
+        15   
+        activities
+        <Text
+          style={
+            {
+              "color": "#999",
+              "fontSize": 12,
+              "fontStyle": "italic",
+            }
+          }
+        >
+           • Swipe left to dismiss
+        </Text>
+      </Text>
+    </View>
+    <RCTScrollView
+      contentContainerStyle={
+        {
+          "paddingVertical": 8,
+        }
+      }
+      data={
+        [
+          {
+            "color": "#4A90E2",
+            "description": "Description 0",
+            "icon": "chatbubble",
+            "id": "activity-0",
+            "timestamp": 2021-01-01T00:00:00.000Z,
+            "title": "Activity 0",
+            "type": "message",
+          },
+          {
+            "color": "#4A90E2",
+            "description": "Description 1",
+            "icon": "chatbubble",
+            "id": "activity-1",
+            "timestamp": 2021-01-01T00:00:00.000Z,
+            "title": "Activity 1",
+            "type": "message",
+          },
+          {
+            "color": "#4A90E2",
+            "description": "Description 2",
+            "icon": "chatbubble",
+            "id": "activity-2",
+            "timestamp": 2021-01-01T00:00:00.000Z,
+            "title": "Activity 2",
+            "type": "message",
+          },
+          {
+            "color": "#4A90E2",
+            "description": "Description 3",
+            "icon": "chatbubble",
+            "id": "activity-3",
+            "timestamp": 2021-01-01T00:00:00.000Z,
+            "title": "Activity 3",
+            "type": "message",
+          },
+          {
+            "color": "#4A90E2",
+            "description": "Description 4",
+            "icon": "chatbubble",
+            "id": "activity-4",
+            "timestamp": 2021-01-01T00:00:00.000Z,
+            "title": "Activity 4",
+            "type": "message",
+          },
+          {
+            "color": "#4A90E2",
+            "description": "Description 5",
+            "icon": "chatbubble",
+            "id": "activity-5",
+            "timestamp": 2021-01-01T00:00:00.000Z,
+            "title": "Activity 5",
+            "type": "message",
+          },
+          {
+            "color": "#4A90E2",
+            "description": "Description 6",
+            "icon": "chatbubble",
+            "id": "activity-6",
+            "timestamp": 2021-01-01T00:00:00.000Z,
+            "title": "Activity 6",
+            "type": "message",
+          },
+          {
+            "color": "#4A90E2",
+            "description": "Description 7",
+            "icon": "chatbubble",
+            "id": "activity-7",
+            "timestamp": 2021-01-01T00:00:00.000Z,
+            "title": "Activity 7",
+            "type": "message",
+          },
+          {
+            "color": "#4A90E2",
+            "description": "Description 8",
+            "icon": "chatbubble",
+            "id": "activity-8",
+            "timestamp": 2021-01-01T00:00:00.000Z,
+            "title": "Activity 8",
+            "type": "message",
+          },
+          {
+            "color": "#4A90E2",
+            "description": "Description 9",
+            "icon": "chatbubble",
+            "id": "activity-9",
+            "timestamp": 2021-01-01T00:00:00.000Z,
+            "title": "Activity 9",
+            "type": "message",
+          },
+          {
+            "color": "#4A90E2",
+            "description": "Description 10",
+            "icon": "chatbubble",
+            "id": "activity-10",
+            "timestamp": 2021-01-01T00:00:00.000Z,
+            "title": "Activity 10",
+            "type": "message",
+          },
+          {
+            "color": "#4A90E2",
+            "description": "Description 11",
+            "icon": "chatbubble",
+            "id": "activity-11",
+            "timestamp": 2021-01-01T00:00:00.000Z,
+            "title": "Activity 11",
+            "type": "message",
+          },
+          {
+            "color": "#4A90E2",
+            "description": "Description 12",
+            "icon": "chatbubble",
+            "id": "activity-12",
+            "timestamp": 2021-01-01T00:00:00.000Z,
+            "title": "Activity 12",
+            "type": "message",
+          },
+          {
+            "color": "#4A90E2",
+            "description": "Description 13",
+            "icon": "chatbubble",
+            "id": "activity-13",
+            "timestamp": 2021-01-01T00:00:00.000Z,
+            "title": "Activity 13",
+            "type": "message",
+          },
+          {
+            "color": "#4A90E2",
+            "description": "Description 14",
+            "icon": "chatbubble",
+            "id": "activity-14",
+            "timestamp": 2021-01-01T00:00:00.000Z,
+            "title": "Activity 14",
+            "type": "message",
+          },
+        ]
+      }
+      getItem={[Function]}
+      getItemCount={[Function]}
+      getItemLayout={[Function]}
+      initialNumToRender={15}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      onContentSizeChange={[Function]}
+      onLayout={[Function]}
+      onMomentumScrollBegin={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={true}
+      renderItem={[Function]}
+      scrollEventThrottle={0.0001}
+      showsVerticalScrollIndicator={false}
+      stickyHeaderIndices={[]}
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={[]}
+      windowSize={10}
+    >
+      <View>
+        <View
+          onFocusCapture={[Function]}
+          style={null}
+        />
+        <View
+          onFocusCapture={[Function]}
+          style={null}
+        />
+        <View
+          onFocusCapture={[Function]}
+          style={null}
+        />
+        <View
+          onFocusCapture={[Function]}
+          style={null}
+        />
+        <View
+          onFocusCapture={[Function]}
+          style={null}
+        />
+        <View
+          onFocusCapture={[Function]}
+          style={null}
+        />
+        <View
+          onFocusCapture={[Function]}
+          style={null}
+        />
+        <View
+          onFocusCapture={[Function]}
+          style={null}
+        />
+        <View
+          onFocusCapture={[Function]}
+          style={null}
+        />
+        <View
+          onFocusCapture={[Function]}
+          style={null}
+        />
+        <View
+          onFocusCapture={[Function]}
+          style={null}
+        />
+        <View
+          onFocusCapture={[Function]}
+          style={null}
+        />
+        <View
+          onFocusCapture={[Function]}
+          style={null}
+        />
+        <View
+          onFocusCapture={[Function]}
+          style={null}
+        />
+        <View
+          onFocusCapture={[Function]}
+          style={null}
+        />
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;
